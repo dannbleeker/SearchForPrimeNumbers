@@ -1,10 +1,11 @@
 """ Class that works as the primeServer - serves up intervals to search for primes """
+#sudo apt install python3-mysqldb
 import MySQLdb
 
 class primeServer:
     
     def __init__(self):
-        self._db_connection =  MySQLdb.connect(host="localhost",
+        self._db_connection =  MySQLdb.connect(host="10.0.0.28",
                      user="username",
                      passwd="password",
                      db="mysqlsystemuser")

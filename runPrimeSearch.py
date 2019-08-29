@@ -39,6 +39,9 @@ def main():
     for currentNumber in range(startSearchAt, endSearchAt):
         if isPrimeSearch.checkForPrime(currentNumber) == True:
             primeCounter += 1
+          
+            if currentNumber <> 2:
+                primeCounter += 1 # this works because there are only two prime numbers next to each other, and that are 2 and 3.
             
             PrimeServerConnection.returnPrimeFound(currentNumber)
             

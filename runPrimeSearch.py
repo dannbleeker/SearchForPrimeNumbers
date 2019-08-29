@@ -39,12 +39,12 @@ def main():
     for currentNumber in range(startSearchAt, endSearchAt):
         if isPrimeSearch.checkForPrime(currentNumber) == True:
             primeCounter += 1
+
+            PrimeServerConnection.returnPrimeFound(currentNumber)
           
             if currentNumber != 2:
-                primeCounter += 1 # this works because there are only two prime numbers next to each other, and that are 2 and 3.
-            
-            PrimeServerConnection.returnPrimeFound(currentNumber)
-            
+                currentNumber += 1 # this works because there are only two prime numbers next to each other, and that are 2 and 3.
+                        
                 # progressBar
         if(completionRate < int(round(((currentNumber-startSearchAt)/(endSearchAt-startSearchAt))*100,0))):
             completionRate = int(round(((currentNumber-startSearchAt)/(endSearchAt-startSearchAt))*100,0))

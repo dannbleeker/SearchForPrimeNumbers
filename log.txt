@@ -1,0 +1,19 @@
+Searching from 100.000 to 200.000 (interval: 100.000)
+CheckForPrime1 (whl): 0.8063
+CheckForPrime2 (whl): 1.2418
+CheckForPrime3 (whl): 1.2275
+CheckForPrime4 (whl): 238.5757
+CheckForPrime5 (whl): 0.7796
+CheckForPrime6 (whl): 0.4709
+CheckForPrime1 (wsa): 0.7147
+CheckForPrime2 (wsa): 1.1394
+CheckForPrime3 (wsa): 1.1934
+CheckForPrime4 (wsa): 248.4423
+CheckForPrime5 (wsa): 1.0944
+CheckForPrime6 (wsa): 1.0758
+CheckForPrime1 (for): 1.5279
+CheckForPrime2 (for): 2.4082
+CheckForPrime3 (for): 2.0835
+CheckForPrime4 (for): 340.7217
+CheckForPrime5 (for): 1.0462
+CheckForPrime6 (for): 0.7892

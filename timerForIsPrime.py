@@ -1,64 +1,62 @@
 #!/usr/bin/env python3
-
 import timeit
 
-TEST_CODE = '''
+import sys
+temp = sys.stdout # store original stdout object for later
+
+
+
+sys.stdout = open('log.txt', 'w') # redirect all prints to this log file
+
+# Indsæt variable heri
+
+startNumber = 1000100000
+endNumber = 1000200000
+
+print ("Searching from %s to %s (interval: %s)" % (f"{startNumber:,d}".replace(",","."), f"{endNumber:,d}".replace(",","."), f"{(endNumber-startNumber):,d}".replace(",",".")))
+
+# [1, 2, 3, 5, 6]
+
+for currentPrimeSearch in range (1,7):
+    TEST_CODE = '''
 import isPrimeSearch
 primeCounter = 0
-currentNumber = 100000000
-while currentNumber <= 110000000:
-    if isPrimeSearch.checkForPrime5(currentNumber) == True:
+currentNumber = %s
+while currentNumber <= %s:
+    if isPrimeSearch.checkForPrime%s(currentNumber) == True:
         primeCounter +=  1
-        currentNumber += 1
     currentNumber += 1
-'''
-print( "\nCheckForPrime5 + 1: %s" % timeit.timeit(stmt = TEST_CODE, number = 5)  )
+''' % (startNumber, endNumber, currentPrimeSearch)
+    #print(TEST_CODE)
+    print("CheckForPrime%s (whl): %s" % (currentPrimeSearch,round(timeit.timeit(stmt = TEST_CODE, number = 1),4)  ))
 
-TEST_CODE = '''
+## With skip one after prime
+    
+for currentPrimeSearch in range (1,7):
+    TEST_CODE = '''
 import isPrimeSearch
 primeCounter = 0
-for currentNumber in range(100000000, 110000000):
-    if isPrimeSearch.checkForPrime5(currentNumber) == True:
-        primeCounter += 1     
-'''
-print( "\nCheckForPrime5: %s" % timeit.timeit(stmt = TEST_CODE, number = 5)  )
+currentNumber = %s
+while currentNumber <= %s:
+    if isPrimeSearch.checkForPrime%s(currentNumber) == True:
+        primeCounter +=  1
+        currentNumber += 1        
+    currentNumber += 1
+''' % (startNumber, endNumber, currentPrimeSearch)
 
-#####################################################################################
+    print("CheckForPrime%s (wsa): %s" % (currentPrimeSearch,round(timeit.timeit(stmt = TEST_CODE, number = 1),4)  ))
 
-TEST_CODE = '''
+## With for loop
+for currentPrimeSearch in range (1,7):
+    TEST_CODE = '''
 import isPrimeSearch
 primeCounter = 0
-for currentNumber in range(1, 1000000):
-    if isPrimeSearch.checkForPrime(currentNumber) == True:
-        primeCounter += 1     
-'''
-#print( "\nCheckForPrime1: %s" % timeit.timeit(stmt = TEST_CODE, number = 5)  )
+for currentNumber in range(%s, %s):
+    if isPrimeSearch.checkForPrime%s(currentNumber) == True:
+        primeCounter +=  1
+''' % (startNumber, endNumber, currentPrimeSearch)
+    #print(TEST_CODE)
+    print("CheckForPrime%s (for): %s" % (currentPrimeSearch,round(timeit.timeit(stmt = TEST_CODE, number = 1),4)  ))
 
-TEST_CODE = '''
-import isPrimeSearch
-primeCounter = 0
-for currentNumber in range(1000000, 2000000):
-    if isPrimeSearch.checkForPrime2(currentNumber) == True:
-        primeCounter += 1     
-'''
-#print( "CheckForPrime2: %s" % timeit.timeit(stmt = TEST_CODE, number = 1)  )
-
-
-TEST_CODE = '''
-import isPrimeSearch
-primeCounter = 0
-for currentNumber in range(1000000, 2000000):
-    if isPrimeSearch.checkForPrime3(currentNumber) == True:
-        primeCounter += 1     
-'''
-#print( "CheckForPrime3: %s" % timeit.timeit(stmt = TEST_CODE, number = 1)  )
-
-
-TEST_CODE = '''
-import isPrimeSearch
-primeCounter = 0
-for currentNumber in range(100000, 200000):
-    if isPrimeSearch.checkForPrime4(currentNumber) == True:
-        primeCounter += 1     
-'''
-#print( "CheckForPrime4: %s" % timeit.timeit(stmt = TEST_CODE, number = 1)  )
+sys.stdout.close()                # ordinary file object
+sys.stdout = temp                 # restore print commands to interactive prompt

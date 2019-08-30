@@ -87,3 +87,25 @@ def checkForPrime4(possiblePrimeNumber):
             return False
     
     return True
+
+
+def checkForPrime5(possiblePrimeNumber):
+ 
+    # Corner cases 
+    if (possiblePrimeNumber <= 1) : 
+        return False
+    if (possiblePrimeNumber <= 3) : 
+        return True
+  
+    # This is checked so that we can skip  
+    # middle five numbers in below loop 
+    if (possiblePrimeNumber % 2 == 0 or possiblePrimeNumber % 3 == 0) : 
+        return False
+  
+    i = 5
+    while(i * i <= possiblePrimeNumber) : 
+        if (possiblePrimeNumber % i == 0 or possiblePrimeNumber % (i + 2) == 0) : 
+            return False
+        i = i + 6
+  
+    return True

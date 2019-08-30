@@ -90,7 +90,10 @@ def checkForPrime4(possiblePrimeNumber):
 
 
 def checkForPrime5(possiblePrimeNumber):
- 
+
+    if not isinstance(possiblePrimeNumber, int):
+    return False
+    
     # Corner cases 
     if (possiblePrimeNumber <= 1) : 
         return False

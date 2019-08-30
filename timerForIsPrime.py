@@ -6,7 +6,7 @@ temp = sys.stdout # store original stdout object for later
 
 
 
-sys.stdout = open('log.txt', 'w') # redirect all prints to this log file
+sys.stdout = open('log.txt', 'a') # redirect all prints to this log file
 
 # Indsæt variable heri
 

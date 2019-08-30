@@ -20,6 +20,10 @@ def main():
             print("Biggest prime found: %s" % (f"{PrimeServerConnection.returnHighestPrimeFound():,d}".replace(",",".")))
             print("Number of unfinished intervals: %s" % ((f"{PrimeServerConnection.returnUnfinishedIntervals():,d}".replace(",","."))))
             return
+        elif(sys.argv[1] == "-?"):
+            print("useIntervals forces to use any open intervals on the server")
+            print("status gives a status from the server")
+            print("follow command with a number, and that is the interval of primes beeing searched")
         elif(sys.argv[1] == "useIntervals"):
             forceUseOfIncompleteIntervals = True
 

@@ -37,7 +37,7 @@ def main():
     sys.stdout.flush()
     
     for currentNumber in range(startSearchAt, endSearchAt):
-        if isPrimeSearch.checkForPrime(currentNumber) == True:
+        if isPrimeSearch.checkForPrime5(currentNumber) == True:
             primeCounter += 1
 
             PrimeServerConnection.returnPrimeFound(currentNumber)

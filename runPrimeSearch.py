@@ -40,7 +40,9 @@ def main():
     sys.stdout.write("\r"+str(completionRate)+"% completed")
     sys.stdout.flush()
     
-    for currentNumber in range(startSearchAt, endSearchAt):
+    currentNumber = startSearchAt
+    while currentNumber <= endSearchAt:
+
         if isPrimeSearch.checkForPrime5(currentNumber) == True:
             primeCounter += 1
 
@@ -53,6 +55,8 @@ def main():
             #print("%s%%" % completionRate )
             sys.stdout.write("\r"+str(completionRate)+"% completed")
             sys.stdout.flush()
+        
+        currentNumber += 1
 
     sys.stdout.write("\r100% completed")
     sys.stdout.flush()

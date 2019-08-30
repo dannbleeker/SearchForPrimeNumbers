@@ -1,3 +1,5 @@
+# While jump to next prime - should e faster... but is not... hm more test
+
 # Tested with 0,10000 interval
 #CheckForPrime1: 0.1651902219891781
 #CheckForPrime2: 0.1480777050019242
@@ -16,7 +18,7 @@
 #CheckForPrime3: 1.3987777099973755
 #CheckForPrime4: 221.99308175299666
 
-def checkForPrime(possiblePrimeNumber):
+def checkForPrime1(possiblePrimeNumber):
     """ Checkes if a number is a prime. Returns true or false """
     if not isinstance(possiblePrimeNumber, int):
         return False
@@ -110,5 +112,30 @@ def checkForPrime5(possiblePrimeNumber):
         if (possiblePrimeNumber % i == 0 or possiblePrimeNumber % (i + 2) == 0) : 
             return False
         i = i + 6
+  
+    return True
+
+def checkForPrime6(possiblePrimeNumber):
+
+    if not isinstance(possiblePrimeNumber, int):
+        return False
+    
+    # Corner cases 
+    if (possiblePrimeNumber <= 1) : 
+        return False
+    if (possiblePrimeNumber <= 3) : 
+        return True
+  
+    # This is checked so that we can skip  
+    # middle five numbers in below loop 
+    if (possiblePrimeNumber % 2 == 0 or possiblePrimeNumber % 3 == 0) : 
+        return False
+  
+    i = 5
+    while(i * i <= possiblePrimeNumber) : 
+        if (possiblePrimeNumber % i == 0 or possiblePrimeNumber % (i+6) == 0 or possiblePrimeNumber % (i+12) == 0 or possiblePrimeNumber % (i+18) == 0 or possiblePrimeNumber % (i+24) == 0
+        or possiblePrimeNumber % (i + 2) == 0 or possiblePrimeNumber % (i + 2 +6) == 0 or possiblePrimeNumber % (i + 2 +12) == 0 or possiblePrimeNumber % (i + 2 +24) == 0 or possiblePrimeNumber % (i + 2 +30) == 0) : 
+            return False
+        i = i + 36
   
     return True

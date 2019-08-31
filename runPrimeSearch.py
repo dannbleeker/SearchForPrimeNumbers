@@ -43,7 +43,7 @@ def main():
     currentNumber = startSearchAt
     while currentNumber <= endSearchAt:
 
-        if isPrimeSearch.checkForPrime5(currentNumber) == True:
+        if isPrimeSearch.checkForPrime6(currentNumber) == True:
             primeCounter += 1
 
             PrimeServerConnection.returnPrimeFound(currentNumber)

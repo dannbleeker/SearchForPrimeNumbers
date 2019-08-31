@@ -1,22 +1,3 @@
-# While jump to next prime - should e faster... but is not... hm more test
-
-# Tested with 0,10000 interval
-#CheckForPrime1: 0.1651902219891781
-#CheckForPrime2: 0.1480777050019242
-#CheckForPrime3: 0.14326046900532674
-#CheckForPrime4: 1.6963655020081205
-
-# Tested with 1000000,2000000 interval
-#CheckForPrime1: 67.9007603909995
-#CheckForPrime2: 103.35641144200054
-#CheckForPrime3: 99.4001969910023
-#CheckForPrime4: more than 12 hours.... stoppped after that
-
-# Tested with 100000, 200000 interval
-#CheckForPrime1: 1.0779051249992335
-#CheckForPrime2: 1.4072657409997191
-#CheckForPrime3: 1.3987777099973755
-#CheckForPrime4: 221.99308175299666
 
 def checkForPrime1(possiblePrimeNumber):
     """ Checkes if a number is a prime. Returns true or false """

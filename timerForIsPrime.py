@@ -8,8 +8,8 @@ if (useLogFile):
 
 # Indsæt variable heri
 
-startNumber = 200
-endNumber = 400
+startNumber = 10000200000
+endNumber = 10000400000
 
 print ("Searching from %s to %s (interval: %s)" % (f"{startNumber:,d}".replace(",","."), f"{endNumber:,d}".replace(",","."), f"{(endNumber-startNumber):,d}".replace(",",".")))
 
@@ -18,7 +18,7 @@ if (useLogFile):
 
 # [1, 2, 3, 5, 6]
 
-for currentPrimeSearch in range (1,7):
+for currentPrimeSearch in range (6,7):
     TEST_CODE = '''
 import isPrimeSearch
 primeCounter = 0
@@ -35,7 +35,7 @@ while currentNumber <= %s:
 
 ## With skip one after prime
     
-for currentPrimeSearch in range (1,7):
+for currentPrimeSearch in range (6,7):
     TEST_CODE = '''
 import isPrimeSearch
 primeCounter = 0
@@ -52,7 +52,7 @@ while currentNumber <= %s:
         print("CheckForPrime%s (wsa): %s" % (currentPrimeSearch,round(timeit.timeit(stmt = TEST_CODE, number = 1),4)  ), file=logfile)
 
 ## With for loop
-for currentPrimeSearch in range (1,7):
+for currentPrimeSearch in range (6,7):
     TEST_CODE = '''
 import isPrimeSearch
 primeCounter = 0

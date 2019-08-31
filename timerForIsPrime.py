@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 import timeit
 
-import sys
-temp = sys.stdout # store original stdout object for later
+useLogFile = True
 
-
-
-sys.stdout = open('log.txt', 'a') # redirect all prints to this log file
+if (useLogFile):
+    logfile = open('log.txt', 'a') # redirect all prints to this log file
 
 # Indsæt variable heri
 
-startNumber = 1000100000
-endNumber = 1000200000
+startNumber = 200
+endNumber = 400
 
 print ("Searching from %s to %s (interval: %s)" % (f"{startNumber:,d}".replace(",","."), f"{endNumber:,d}".replace(",","."), f"{(endNumber-startNumber):,d}".replace(",",".")))
+
+if (useLogFile):
+    print ("Searching from %s to %s (interval: %s)" % (f"{startNumber:,d}".replace(",","."), f"{endNumber:,d}".replace(",","."), f"{(endNumber-startNumber):,d}".replace(",",".")), file=logfile)
 
 # [1, 2, 3, 5, 6]
 
@@ -29,6 +30,8 @@ while currentNumber <= %s:
 ''' % (startNumber, endNumber, currentPrimeSearch)
     #print(TEST_CODE)
     print("CheckForPrime%s (whl): %s" % (currentPrimeSearch,round(timeit.timeit(stmt = TEST_CODE, number = 1),4)  ))
+    if (useLogFile):
+        print("CheckForPrime%s (whl): %s" % (currentPrimeSearch,round(timeit.timeit(stmt = TEST_CODE, number = 1),4)  ), file=logfile)
 
 ## With skip one after prime
     
@@ -45,6 +48,8 @@ while currentNumber <= %s:
 ''' % (startNumber, endNumber, currentPrimeSearch)
 
     print("CheckForPrime%s (wsa): %s" % (currentPrimeSearch,round(timeit.timeit(stmt = TEST_CODE, number = 1),4)  ))
+    if (useLogFile):
+        print("CheckForPrime%s (wsa): %s" % (currentPrimeSearch,round(timeit.timeit(stmt = TEST_CODE, number = 1),4)  ), file=logfile)
 
 ## With for loop
 for currentPrimeSearch in range (1,7):
@@ -57,6 +62,7 @@ for currentNumber in range(%s, %s):
 ''' % (startNumber, endNumber, currentPrimeSearch)
     #print(TEST_CODE)
     print("CheckForPrime%s (for): %s" % (currentPrimeSearch,round(timeit.timeit(stmt = TEST_CODE, number = 1),4)  ))
+    if (useLogFile):
+        print("CheckForPrime%s (for): %s" % (currentPrimeSearch,round(timeit.timeit(stmt = TEST_CODE, number = 1),4)  ), file=logfile)
 
-sys.stdout.close()                # ordinary file object
-sys.stdout = temp                 # restore print commands to interactive prompt
+logfile.close()                # ordinary file object

@@ -82,9 +82,7 @@ def checkForPrime5(possiblePrimeNumber):
         return False
     if (possiblePrimeNumber <= 3) : 
         return True
-  
-    # This is checked so that we can skip  
-    # middle five numbers in below loop 
+
     if (possiblePrimeNumber % 2 == 0 or possiblePrimeNumber % 3 == 0) : 
         return False
   
@@ -106,9 +104,7 @@ def checkForPrime6(possiblePrimeNumber):
         return False
     if (possiblePrimeNumber <= 3) : 
         return True
-  
-    # This is checked so that we can skip  
-    # middle five numbers in below loop 
+ 
     if (possiblePrimeNumber % 2 == 0 or possiblePrimeNumber % 3 == 0) : 
         return False
   

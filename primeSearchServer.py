@@ -69,10 +69,10 @@ ALTER TABLE `primes`
         # First ensure that the ranges start from 1
         self._db_cur.execute("SELECT DISTINCT MIN(StartNumber) FROM primeSearches")
         
-        if self._db_cur.rowcount == 0:
-            return
-                 
         firstStartNumber = self._db_cur.fetchone()
+
+        if firstStartNumber[0] == None:                
+            return
 
         if firstStartNumber[0] > 2:
             self._db_cur.execute("INSERT INTO primeSearches (StartNumber,EndNumber) VALUES (%s, %s)" % (2,firstStartNumber(0)))
@@ -81,7 +81,9 @@ ALTER TABLE `primes`
         # Second ensure that there is no numbers not covered by an interval (up untill the highest number in the intervals)
         self._db_cur.execute("SELECT DISTINCT leftTable.EndNumber+1 FROM primeSearches as leftTable LEFT JOIN primeSearches as rightTable ON leftTable.EndNumber+1 = rightTable.StartNumber WHERE rightTable.StartNumber is null AND leftTable.EndNumber not IN (SELECT max(EndNumber) FROM primeSearches)")
 
-        if self._db_cur.rowcount == 0:
+        sqlReturn = self._db_cur.fetchone()
+
+        if sqlReturn[0] == None:
             pass
 
             # No non allocated intervals

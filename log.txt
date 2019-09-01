@@ -124,3 +124,6 @@ CheckForPrime6 (for1): 2309.7579
 Searching from 0 to 100.000.000 (interval: 100.000.000)
 CheckForPrime6 (wsa2): 1301.4935
 CheckForPrime6 (for1): 1294.6456
+Searching from 0 to 100.000.000 (interval: 100.000.000)
+CheckForPrime6 (wsa2): 1305.5113
+CheckForPrime6 (for1): 1301.1399

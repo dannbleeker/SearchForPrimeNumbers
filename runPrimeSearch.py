@@ -79,7 +79,7 @@ def main():
     print("\n\nStarting at: %s" % startTime.strftime("%Y-%m-%d %H:%M:%S"))
     print("Ending at: %s" % endTime.strftime("%Y-%m-%d %H:%M:%S"))
     timedelta = endTime - startTime
-    # print ("Running time: %s seconds" % timedelta.seconds)
+
     print("Running time: %s minutes %s seconds" % (int(timedelta.seconds / 60), (timedelta.seconds % 60)))
     print("Searched from %s to %s (interval: %s)" % (
     f"{startSearchAt:,d}".replace(",", "."), f"{endSearchAt:,d}".replace(",", "."),

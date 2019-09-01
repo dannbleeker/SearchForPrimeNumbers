@@ -91,3 +91,11 @@ Searching from 0 to 2.000.000 (interval: 2.000.000)
 CheckForPrime6 (wsa): 5.0595
 CheckForPrime6 (wsa): 5.0797
 CheckForPrime6 (for): 5.238
+Searching from 0 to 20.000.000 (interval: 20.000.000)
+CheckForPrime6 (wsa1): 134.6466
+CheckForPrime6 (wsa2): 135.7713
+CheckForPrime6 (for1): 132.4408
+Searching from 0 to 100.000.000 (interval: 100.000.000)
+CheckForPrime6 (wsa1): 1336.3996
+CheckForPrime6 (wsa2): 1325.0711
+CheckForPrime6 (for1): 1325.3665

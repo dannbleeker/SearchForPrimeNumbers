@@ -34,10 +34,10 @@ while currentNumber <= %s:
     else:        
         currentNumber += 1
 ''' % (startNumber, endNumber, currentPrimeSearch)
-
-    print("CheckForPrime%s (wsa2): %s" % (currentPrimeSearch, round(timeit.timeit(stmt=TEST_CODE, number=1), 4)))
+    timeToRun = round(timeit.timeit(stmt=TEST_CODE, number=1), 4)
+    print("CheckForPrime%s (wsa2): %s" % (currentPrimeSearch, timeToRun))
     if (useLogFile):
-        print("CheckForPrime%s (wsa2): %s" % (currentPrimeSearch, round(timeit.timeit(stmt=TEST_CODE, number=1), 4)),
+        print("CheckForPrime%s (wsa2): %s" % (currentPrimeSearch, timeToRun),
               file=logfile)
 
 ## With for loop
@@ -50,9 +50,10 @@ for currentNumber in range(%s, %s):
         primeCounter +=  1
 ''' % (startNumber, endNumber, currentPrimeSearch)
     # print(TEST_CODE)
-    print("CheckForPrime%s (for1): %s" % (currentPrimeSearch, round(timeit.timeit(stmt=TEST_CODE, number=1), 4)))
+    timeToRun = round(timeit.timeit(stmt=TEST_CODE, number=1), 4)
+    print("CheckForPrime%s (for1): %s" % (currentPrimeSearch, timeToRun))
     if (useLogFile):
-        print("CheckForPrime%s (for1): %s" % (currentPrimeSearch, round(timeit.timeit(stmt=TEST_CODE, number=1), 4)),
+        print("CheckForPrime%s (for1): %s" % (currentPrimeSearch, timeToRun),
               file=logfile)
 
 logfile.close()  # ordinary file object

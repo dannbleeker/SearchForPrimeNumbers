@@ -36,3 +36,77 @@ CheckForPrime3 (for): 20.4777
 CheckForPrime4 (for): 12101.2956
 CheckForPrime5 (for): 10.9899
 CheckForPrime6 (for): 8.9704
+Searching from 200.000 to 400.000 (interval: 200.000)
+CheckForPrime1 (whl): 1.3967
+CheckForPrime2 (whl): 2.4884
+CheckForPrime3 (whl): 2.0627
+CheckForPrime4 (whl): 426.7062
+CheckForPrime5 (whl): 0.7277
+CheckForPrime6 (whl): 0.6428
+CheckForPrime1 (wsa): 0.991
+CheckForPrime2 (wsa): 1.4276
+CheckForPrime3 (wsa): 1.4001
+CheckForPrime4 (wsa): 372.8232
+CheckForPrime5 (wsa): 0.6901
+CheckForPrime6 (wsa): 0.5645
+CheckForPrime1 (for): 0.9844
+CheckForPrime2 (for): 1.5029
+CheckForPrime3 (for): 1.4561
+CheckForPrime4 (for): 350.9704
+CheckForPrime5 (for): 0.6733
+CheckForPrime6 (for): 0.5591
+Searching from 200 to 400 (interval: 200)
+CheckForPrime1 (whl): 0.0011
+CheckForPrime2 (whl): 0.0006
+CheckForPrime3 (whl): 0.0006
+CheckForPrime4 (whl): 0.001
+CheckForPrime5 (whl): 0.0002
+CheckForPrime6 (whl): 0.0002
+CheckForPrime1 (wsa): 0.0006
+CheckForPrime2 (wsa): 0.0004
+CheckForPrime3 (wsa): 0.0003
+CheckForPrime4 (wsa): 0.0006
+CheckForPrime5 (wsa): 0.0002
+CheckForPrime6 (wsa): 0.0002
+CheckForPrime1 (for): 0.0005
+CheckForPrime2 (for): 0.0003
+CheckForPrime3 (for): 0.0003
+CheckForPrime4 (for): 0.0005
+CheckForPrime5 (for): 0.0001
+CheckForPrime6 (for): 0.0001
+Searching from 10.000.020.000 to 10.000.040.000 (interval: 20.000)
+CheckForPrime6 (whl): 4.5673
+CheckForPrime6 (wsa): 4.5501
+CheckForPrime6 (for): 4.5586
+Searching from 10.000.000.000 to 10.000.100.000 (interval: 100.000)
+CheckForPrime6 (whl): 23.3232
+CheckForPrime6 (wsa): 23.3167
+CheckForPrime6 (for): 22.5021
+Searching from 0 to 1.000.000 (interval: 1.000.000)
+CheckForPrime6 (whl): 2.0782
+CheckForPrime6 (wsa): 1.9336
+CheckForPrime6 (for): 1.8767
+Searching from 0 to 10.000.000 (interval: 10.000.000)
+CheckForPrime6 (whl): 49.0844
+CheckForPrime6 (wsa): 51.5961
+CheckForPrime6 (for): 52.1855
+Searching from 0 to 100.000.000 (interval: 100.000.000)
+CheckForPrime6 (whl): 1350.6299
+CheckForPrime6 (wsa): 1311.6482
+CheckForPrime6 (for): 1334.4371
+Searching from 100.000 to 200.000 (interval: 100.000)
+CheckForPrime6 (whl): 0.1323
+CheckForPrime6 (wsa): 0.1217
+CheckForPrime6 (for): 0.1305
+Searching from 100.000 to 200.000 (interval: 100.000)
+CheckForPrime6 (wsa): 0.1346
+CheckForPrime6 (wsa): 0.1344
+CheckForPrime6 (for): 0.1242
+Searching from 0 to 2.000.000 (interval: 2.000.000)
+CheckForPrime6 (wsa): 5.2025
+CheckForPrime6 (wsa): 5.2194
+CheckForPrime6 (for): 5.1285
+Searching from 0 to 2.000.000 (interval: 2.000.000)
+CheckForPrime6 (wsa): 5.0595
+CheckForPrime6 (wsa): 5.0797
+CheckForPrime6 (for): 5.238

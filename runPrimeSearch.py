@@ -54,14 +54,18 @@ def main():
 
             PrimeServerConnection.returnPrimeFound(currentNumber)
 
-            # progressBar
+            currentNumber += 2
+        else:
+            currentNumber += 1
+
+        # progressBar
         if (completionRate < int(round(((currentNumber - startSearchAt) / (endSearchAt - startSearchAt)) * 100, 0))):
             completionRate = int(round(((currentNumber - startSearchAt) / (endSearchAt - startSearchAt)) * 100, 0))
             # print("%s%%" % completionRate )
             sys.stdout.write("\r" + str(completionRate) + "% completed")
             sys.stdout.flush()
 
-        currentNumber += 1
+
 
     sys.stdout.write("\r100% completed")
     sys.stdout.flush()

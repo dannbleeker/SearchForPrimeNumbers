@@ -108,3 +108,5 @@ venv.bak/
 .idea/SearchForPrimeNumbers.iml
 .idea/vcs.xml
 .idea/workspace.xml
+.vscode/launch.json
+.vscode/settings.json
